@@ -20,6 +20,10 @@ public class Patient {
     private String invoice;
     private LocalDate date;
 
+    public Patient(String name) {
+        this.name = name;
+    }
+
     public String getInvoice() {
         return invoice;
     }
@@ -79,4 +83,16 @@ public class Patient {
         this.treatment = treatment;
     }
 
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", symptoms=" + symptoms +
+                ", illnees='" + illnees + '\'' +
+                ", treatment='" + treatment + '\'' +
+                ", invoice='" + invoice + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }

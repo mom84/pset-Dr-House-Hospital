@@ -10,7 +10,6 @@ import java.util.List;
 public class NurseryEndpoint {
 
     private Patient patient;
-
     private Nursery nursery;
 
     private NurseryRepository nurseryRepository;

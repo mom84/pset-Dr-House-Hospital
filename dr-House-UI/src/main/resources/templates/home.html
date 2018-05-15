@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Dr. House Hospital</title>
+    <!--
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
+     -->
+    <object th:include="fragments/resources :: head" th:remove="tag"></object>
+</head>
+
+<body>
+
+<header>
+    <object th:include="fragments/navigation :: menu" th:remove="tag"></object>
+</header>
+
+<br />
+<h1 class="adding" style="color:#6495ED">Welcome to Dr. House Hospital Application</h1>
+<br />
+<br />
+<br />
+<div class="adding">
+    <form  th:action="@{/}" th:object="${newPatient}" method="post">
+       <br />
+        <input type="text" th:field="*{name}" required="required" placeholder="Patient Name"/><br />
+        <input type="text"  th:field="*{symptoms}" required="required" placeholder="Symptoms separated By Comma"/><br />
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<object th:include="fragments/resources :: bottom" th:remove="tag"></object>
+
+</body>
+</html>

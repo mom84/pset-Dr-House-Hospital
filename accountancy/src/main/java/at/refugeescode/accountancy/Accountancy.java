@@ -15,9 +15,7 @@ public class Accountancy {
         this.patient = patient;
     }
 
-
-    HashMap<String, String> dictionary = new HashMap<>(3);
-
+    HashMap<String, String> dictionary = new HashMap<>(4);
 
     public Patient account(Patient patient) {
         String treatment = patient.getTreatment();
@@ -31,9 +29,11 @@ public class Accountancy {
         String treatment1= "Paracetamol";
         String treatment2=  "AntiPoitec";
         String treatment3=  "Loratiden" ;
-        dictionary.put(treatment1, "40$");
-        dictionary.put(treatment2, "60$");
-        dictionary.put(treatment3, "30$");
+        String treatment4=  "Psoduefidren" ;
+        dictionary.put(treatment1, "40");
+        dictionary.put(treatment2, "60");
+        dictionary.put(treatment3, "30");
+        dictionary.put(treatment4, "20");
         String invoice = "";
         for (Map.Entry<String, String> entry : dictionary.entrySet()) {
             String key = entry.getKey();
@@ -46,13 +46,10 @@ public class Accountancy {
             }
             else
             {
-                invoice = "0$";
+                invoice = "1";
             }
-
-            System.out.println("Key = " + key);
-            System.out.println("Values = " + value);
-            System.out.println(invoice);
         }
+        System.out.println(invoice);
         return invoice;
     }
 }

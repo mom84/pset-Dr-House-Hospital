@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnosis</title>
+    <object th:include="fragments/resources :: head" th:remove="tag"></object>
+</head>
+
+
+
+<body style="background-image: url('https://static1.squarespace.com/static/55229ad2e4b01852f6f9a73a/t/5a0130cf8165f56ac4a65637/1510027480406/medical_biology_detail_medicine_psychedelic_science_abstract_abstraction_chemistry_Genetics_6499x4272.jpg?format=1500w');background-repeat: no-repeat;
+    background-size: 1600px 1000px">
+<header>
+    <object th:include="fragments/navigation :: menu" th:remove="tag"></object>
+</header>
+
+<br>
+<h2 style="text-align: center">Search for Patient</h2>
+<table id="customers" align="center">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>symptoms</th>
+        <th>illness</th>
+        <th>treatment</th>
+        <th>invoice</th>
+        <th>date</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="l : ${List}">
+        <td th:text="${l.name}">1h 15m</td>
+        <td th:text="${l.getsym()}">1h 15m</td>
+        <td th:text="${l.illnees}">1h 15m</td>
+        <td th:text="${l.treatment}">1h 15m</td>
+        <td th:text="${l.invoice+'€'}">invoice</td>
+        <td th:text="${l.date}">date</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<form class="adding"  th:action="@{/search}" method="post">
+    <input type="text" name="name" required="required" placeholder="Insert Patient Name"/>
+    <br/>
+    <input type="submit" value="Find Patient"/>
+</form>
+<br>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+</body>
+</html>

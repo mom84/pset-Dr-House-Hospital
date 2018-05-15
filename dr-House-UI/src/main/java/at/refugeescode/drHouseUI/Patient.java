@@ -1,29 +1,53 @@
-package at.refugeescode.nursery;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+package at.refugeescode.drHouseUI;
 import org.springframework.stereotype.Component;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 
-@Document
 @Component
 public class Patient {
 
-    @Id
-    private  String id;
+
+    private  Long id;
     private String name;
     private List<String> symptoms;
     private String illnees;
     private String treatment;
+    private String invoice;
+    private LocalDate date;
+
+    public String getsym(){
+       return symptoms.stream()
+                .map(e -> e.replace("[" ,""))
+                .collect(Collectors.joining(", "));
+    }
+
+    public String getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(String invoice) {
+        this.invoice = invoice;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
     public Patient() {
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

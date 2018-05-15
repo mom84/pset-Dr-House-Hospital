@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/accountancy/accountancy.iml" filepath="$PROJECT_DIR$/accountancy/accountancy.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnose-room/diagnose-room.iml" filepath="$PROJECT_DIR$/diagnose-room/diagnose-room.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dr-House-UI/dr-House-UI.iml" filepath="$PROJECT_DIR$/dr-House-UI/dr-House-UI.iml" />
       <module fileurl="file://$PROJECT_DIR$/hospital-admission/hospital-admission.iml" filepath="$PROJECT_DIR$/hospital-admission/hospital-admission.iml" />
       <module fileurl="file://$PROJECT_DIR$/nursery/nursery.iml" filepath="$PROJECT_DIR$/nursery/nursery.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pset-Dr-House-Hospital.iml" filepath="$PROJECT_DIR$/.idea/pset-Dr-House-Hospital.iml" />

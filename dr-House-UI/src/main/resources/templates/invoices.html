@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>invoices</title>
+    <object th:include="fragments/resources :: head" th:remove="tag"></object>
+</head>
+
+
+<body style="background-image: url('https://static1.squarespace.com/static/55229ad2e4b01852f6f9a73a/t/5a0130cf8165f56ac4a65637/1510027480406/medical_biology_detail_medicine_psychedelic_science_abstract_abstraction_chemistry_Genetics_6499x4272.jpg?format=1500w');background-repeat: no-repeat;
+    background-size: 1600px 1000px">
+<header>
+    <object th:include="fragments/navigation :: menu" th:remove="tag"></object>
+</header>
+<br>
+<center>
+    <table id="customers" align="center">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>treatment</th>
+            <th>invoice</th>
+            <th>date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <h2 style="text-align: center">Invoices Of The Patients</h2>
+        <tr th:each="list : ${allList}">
+            <td th:text="${list.name}">name</td>
+            <td th:text="${list.treatment}">treatment</td>
+            <td th:text="${list.invoice+'€'}">invoice</td>
+            <td th:text="${list.date}">date</td>
+        </tr>
+        </tbody>
+    </table>
+</center>
+<br>
+<form class="adding" th:action="@{/invoices}" method="post">
+    <input type="submit" value="New Patient"/>
+</form>
+<br>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+
+<object th:include="fragments/resources :: bottom" th:remove="tag"></object>
+
+</body>
+</html>

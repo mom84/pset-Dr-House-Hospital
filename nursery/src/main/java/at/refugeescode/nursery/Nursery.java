@@ -14,7 +14,7 @@ public class Nursery {
     }
 
 
-    HashMap<String, String> pharmacy = new HashMap<>(3);
+    HashMap<String, String> pharmacy = new HashMap<>(4);
 
     public Patient treat(Patient patient) {
         String illnees = patient.getIllnees();
@@ -24,12 +24,14 @@ public class Nursery {
     }
 
     public String getTreatmentFromHash(String illnees) {
-        String illnees3= "Cough";
+        String illnees1=  "ChestPain";
         String illnees2=  "Diarrhea";
-        String illnees1=  "Chest pain" ;
+        String illnees3= "Feber";
+        String illnees4= "Cold";
         pharmacy.put(illnees1, "Paracetamol");
         pharmacy.put(illnees2, "AntiPoitec");
         pharmacy.put(illnees3, "Loratiden");
+        pharmacy.put(illnees4, "Psoduefidren");
         String treatment = "";
         for (Map.Entry<String, String> entry : pharmacy.entrySet()) {
             String key = entry.getKey();
@@ -40,14 +42,12 @@ public class Nursery {
                 treatment = value;
                 return treatment;
             }
-            else
-            {
+            else {
                 treatment = "Water";
             }
-            System.out.println("Key = " + key);
-            System.out.println("Values = " + value);
-            System.out.println(treatment);
+
         }
+        System.out.println(treatment);
         return treatment;
     }
 }

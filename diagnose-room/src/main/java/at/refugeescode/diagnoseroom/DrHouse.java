@@ -13,7 +13,6 @@ public class DrHouse {
 
     HashMap<List<String>, String> clinic = new HashMap<>(3);
 
-
     public Patient check(Patient patient) {
         List<String> symptoms = patient.getSymptoms();
         String illnes = getillnessFromHash(symptoms);
@@ -23,11 +22,13 @@ public class DrHouse {
 
     public String getillnessFromHash(List<String> symptoms) {
         List<String> symptomsList1 = Arrays.asList("Hoarse voice", "Fatigue");
-        List<String> symptomsList3 = Arrays.asList("Colnic", "Constipation");
-        List<String> symptomsList2 = Arrays.asList("Headache", "Wheezing");
-        clinic.put(symptomsList1, "Cough");
-        clinic.put(symptomsList3, "Diarrhea");
-        clinic.put(symptomsList2, "Chest pain");
+        List<String> symptomsList2 = Arrays.asList("Colnic", "Constipation");
+        List<String> symptomsList3 = Arrays.asList("Headache", "Wheezing");
+        List<String> symptomsList4 = Arrays.asList("Runny nose");
+        clinic.put(symptomsList1, "Feber");
+        clinic.put(symptomsList2, "Diarrhea");
+        clinic.put(symptomsList3, "ChestPain");
+        clinic.put(symptomsList4, "Cold");
         String illnes = "";
         for (Map.Entry<List<String>, String> entry : clinic.entrySet()) {
             List<String> key = entry.getKey();
@@ -37,14 +38,13 @@ public class DrHouse {
                 illnes = value;
                 return illnes;
             }
-            else
-            {
+
+            else {
                 illnes = "lupus";
+
             }
-            System.out.println("Key = " + key);
-            System.out.println("Values = " + value);
-            System.out.println(illnes);
         }
+        System.out.println(illnes);
         return illnes;
     }
 }

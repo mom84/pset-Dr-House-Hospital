@@ -5,8 +5,7 @@ import java.util.List;
 
 public class Patient {
 
-
-    public String id;
+    public int id;
     public String name;
     public List<String> symptoms;
 
@@ -15,16 +14,16 @@ public class Patient {
 
     }
 
-    public Patient(String id, String name) {
+    public Patient(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -8,14 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="accountancy" />
         <module name="diagnose-room" />
+        <module name="dr-House-UI" />
         <module name="hospital-admission" />
+        <module name="mp14-morse-encoder-UI" />
         <module name="nursery" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="accountancy" target="9" />
       <module name="diagnose-room" target="9" />
+      <module name="dr-House-UI" target="9" />
       <module name="hospital-admission" target="9" />
+      <module name="mp14-morse-encoder-UI" target="9" />
       <module name="nursery" target="9" />
     </bytecodeTargetLevel>
   </component>
